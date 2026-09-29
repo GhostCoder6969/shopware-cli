@@ -23,6 +23,7 @@ const passwordFlagPrompt = "__INTERACTIVE__"
 var projectDatabaseDumpCmd = &cobra.Command{
 	Use:   "dump",
 	Short: "Export a Shopware project's database to SQL",
+	Args:  cobra.NoArgs,
 	RunE: func(cmd *cobra.Command, _ []string) error {
 		mysqlConfig, err := assembleConnectionURI(cmd)
 		if err != nil {
